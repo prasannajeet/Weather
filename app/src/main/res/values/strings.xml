@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Weather</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="city_name">city</string>
+    <string name="api_url">api_url</string>
+    <string name="result_reciever">result_reciever</string>
+    <string name="current_weather">current_weather</string>
+    <string name="weather_icon">weather_icon</string>
+    <string name="empty_city">No city selected. Tap on corner button to add a city</string>
+    <string name="city_edittext">Example: Atlanta (Only US cities accepted)</string>
+    <string name="btn_submit">Submit</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="current_weather_banner">Current Weather</string>
+    <string name="forecase_banner">10-day Forecast</string>
+    <string name="network_error_title">Network Error</string>
+    <string name="internet_unavailable_error_message">No Internet Available, try later</string>
+</resources>
