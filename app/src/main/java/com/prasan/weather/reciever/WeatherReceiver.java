@@ -27,14 +27,6 @@ public class WeatherReceiver extends ResultReceiver {
         this.interfaceInstance = instance;
     }
 
-    public interface OnApiResponseReceive {
-        void stopRefreshLayout();
-
-        void parseCurrentWeatherData(JSONObject resultJson) throws JSONException;
-
-        void parseForecastWeatherData(JSONObject resultJson) throws JSONException;
-    }
-
     @Override
     protected void onReceiveResult(int resultCode, Bundle resultData) {
         super.onReceiveResult(resultCode, resultData);
@@ -44,7 +36,6 @@ public class WeatherReceiver extends ResultReceiver {
 
         switch (resultCode) {
             case 200: // Data pulled successfully for current weather
-                // Can use Gson library instead as well
                 try {
                     JSONObject resultJson = new JSONObject(resultData.getString("string"));
 
@@ -100,5 +91,13 @@ public class WeatherReceiver extends ResultReceiver {
 
         }
 
+    }
+
+    public interface OnApiResponseReceive {
+        void stopRefreshLayout();
+
+        void parseCurrentWeatherData(JSONObject resultJson) throws JSONException;
+
+        void parseForecastWeatherData(JSONObject resultJson) throws JSONException;
     }
 }
