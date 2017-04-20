@@ -239,6 +239,7 @@ public class MainFragment extends Fragment implements View.OnClickListener, Weat
                 saveCityNameToPref(pref, mCity);
                 hideCityInputLayout();
                 loadDataOnAppLoad();
+                // Country as US is hardcoded in the GET API URLs in Constants.java
             }
         }
     }
