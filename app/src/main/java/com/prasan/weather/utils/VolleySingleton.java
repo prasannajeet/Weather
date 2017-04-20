@@ -1,5 +1,6 @@
 package com.prasan.weather.utils;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 
 import com.android.volley.Request;
@@ -11,9 +12,10 @@ import com.android.volley.toolbox.Volley;
  */
 
 public class VolleySingleton {
+    @SuppressLint("StaticFieldLeak")
     private static volatile VolleySingleton mInstance;
+    private final Context mCtx;
     private RequestQueue mRequestQueue;
-    private Context mCtx;
 
     private VolleySingleton(Context context) {
         mCtx = context;

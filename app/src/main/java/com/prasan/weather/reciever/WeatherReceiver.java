@@ -18,8 +18,8 @@ import java.util.Locale;
 
 public class WeatherReceiver extends ResultReceiver {
 
-    private Context mContext;
-    private OnApiResponseReceive interfaceInstance;
+    private final Context mContext;
+    private final OnApiResponseReceive interfaceInstance;
 
     public WeatherReceiver(Handler handler, Context ctx, OnApiResponseReceive instance) {
         super(handler);
@@ -98,6 +98,6 @@ public class WeatherReceiver extends ResultReceiver {
 
         void parseCurrentWeatherData(JSONObject resultJson) throws JSONException;
 
-        void parseForecastWeatherData(JSONObject resultJson) throws JSONException;
+        void parseForecastWeatherData(JSONObject resultJson);
     }
 }

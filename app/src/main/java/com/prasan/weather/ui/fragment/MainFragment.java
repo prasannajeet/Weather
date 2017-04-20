@@ -253,7 +253,7 @@ public class MainFragment extends Fragment implements View.OnClickListener, Weat
     /**
      * Parses the Json response for current weather for city into POJO
      * @param resultJson - json obtained from API
-     * @throws JSONException
+     * @throws JSONException - Exception
      */
     private void parseWeatherObject(JSONObject resultJson) throws JSONException {
 
@@ -272,9 +272,8 @@ public class MainFragment extends Fragment implements View.OnClickListener, Weat
     /**
      * Parses the 10 day forecast response from API
      * @param resultJson - json obtained from API
-     * @throws JSONException
      */
-    private void parseForcastJsonObject(JSONObject resultJson) throws JSONException {
+    private void parseForcastJsonObject(JSONObject resultJson) {
         forecastArrayList = new ArrayList<>();
 
         int count = resultJson.optInt("cnt", 0);
@@ -379,7 +378,7 @@ public class MainFragment extends Fragment implements View.OnClickListener, Weat
     }
 
     @Override
-    public void parseForecastWeatherData(JSONObject resultJson) throws JSONException {
+    public void parseForecastWeatherData(JSONObject resultJson) {
         parseForcastJsonObject(resultJson);
         mRecyclerView.setAdapter(new ForecastAdapter(forecastArrayList));
     }

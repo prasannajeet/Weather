@@ -72,10 +72,10 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ViewHo
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        private ImageView mWeatherIcon;
-        private TextView mWeatherDesc;
-        private TextView mMinTemp;
-        private TextView mMaxTemp;
+        private final ImageView mWeatherIcon;
+        private final TextView mWeatherDesc;
+        private final TextView mMinTemp;
+        private final TextView mMaxTemp;
 
         ViewHolder(View v) {
             super(v);
